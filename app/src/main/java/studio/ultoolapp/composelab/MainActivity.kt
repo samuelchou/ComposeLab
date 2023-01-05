@@ -16,7 +16,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import studio.ultoolapp.composelab.ui.Article
+import studio.ultoolapp.composelab.ui.DimensionCompose
 import studio.ultoolapp.composelab.ui.theme.ComposeLabTheme
 
 class MainActivity : ComponentActivity() {
@@ -28,7 +28,8 @@ class MainActivity : ComponentActivity() {
                 Surface(modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background) {
 //                    Greeting("Android")
-                    Article()
+//                    Article()
+                    DimensionCompose()
                 }
             }
         }
