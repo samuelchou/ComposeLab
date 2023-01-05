@@ -27,40 +27,38 @@ fun DimensionCompose() {
                 .weight(1f)
                 .fillMaxWidth()
         ) {
-            Box(modifier = Modifier.weight(1f)) {
-                DimensionalCard(
-                    color = Color.Green,
-                    title = stringResource(id = R.string.title_dimension_1),
-                    content = stringResource(id = R.string.content_dimension_1),
-                )
-            }
-            Box(modifier = Modifier.weight(1f)) {
-                DimensionalCard(
-                    color = Color.Yellow,
-                    title = stringResource(id = R.string.title_dimension_2),
-                    content = stringResource(id = R.string.content_dimension_2),
-                )
-            }
+            DimensionalCard(
+                color = Color.Green,
+                title = stringResource(id = R.string.title_dimension_1),
+                content = stringResource(id = R.string.content_dimension_1),
+                modifier = Modifier.weight(1f)
+            )
+
+            DimensionalCard(
+                color = Color.Yellow,
+                title = stringResource(id = R.string.title_dimension_2),
+                content = stringResource(id = R.string.content_dimension_2),
+                modifier = Modifier.weight(1f)
+            )
+
         }
         Row(
             modifier = Modifier
                 .weight(1f)
                 .fillMaxWidth()
         ) {
-            Box(modifier = Modifier.weight(1f)) {
-                DimensionalCard(
-                    color = Color.Cyan,
-                    title = stringResource(id = R.string.title_dimension_3),
-                    content = stringResource(id = R.string.content_dimension_3),
-                )
-            }
-            Box(modifier = Modifier.weight(1f)) {
-                DimensionalCard(
-                    color = Color.LightGray,
-                    title = stringResource(id = R.string.title_dimension_4),
-                    content = stringResource(id = R.string.content_dimension_4),
-                )
-            }
+            DimensionalCard(
+                color = Color.Cyan,
+                title = stringResource(id = R.string.title_dimension_3),
+                content = stringResource(id = R.string.content_dimension_3),
+                modifier = Modifier.weight(1f)
+            )
+            DimensionalCard(
+                color = Color.LightGray,
+                title = stringResource(id = R.string.title_dimension_4),
+                content = stringResource(id = R.string.content_dimension_4),
+                modifier = Modifier.weight(1f)
+            )
         }
     }
 }
@@ -75,12 +73,12 @@ fun DimensionPreview() {
 
 @Composable
 fun DimensionalCard(
-    color: Color, title: String, content: String,
+    color: Color, title: String, content: String, modifier: Modifier = Modifier,
 ) {
     Column(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .background(color = color)
             .padding(16.dp)
